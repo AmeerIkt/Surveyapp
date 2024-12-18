@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    tools:context=".Surveytemplate">
+
+
+    <TextView
+        android:id="@+id/questiontxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/chooiseset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questiontxt">
+
+
+        <RadioButton
+            android:id="@+id/chooise1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/chooise2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/chooise3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/chooise4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male">
+
+        </RadioButton>
+
+
+    </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
