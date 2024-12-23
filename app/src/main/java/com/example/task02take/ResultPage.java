@@ -37,6 +37,6 @@ public class ResultPage extends AppCompatActivity {
 
          int score = getIntent().getIntExtra("mark" , -1);
         TextView scoretextview = findViewById(R.id.ScoreTextView);
-        scoretextview.setText("you scored : " +  score + "" );
+        scoretextview.setText("you scored : " +  score );
     }
 }
