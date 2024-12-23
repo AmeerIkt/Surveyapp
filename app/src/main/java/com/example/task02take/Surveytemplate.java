@@ -49,9 +49,8 @@ public class Surveytemplate extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (question.getRightanswer() == getanswernumber(checkedId))
                     mark++;
-                chooisgroup.clearCheck();
 
-                if (questionID <= quizQuestions.size()-1)
+                if (questionID < quizQuestions.size()-1)
                     questionID++;
                 else {
                     startActivity(new Intent(Surveytemplate.this , ResultPage.class));
