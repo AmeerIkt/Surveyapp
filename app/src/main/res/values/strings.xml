@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Task02take</string>
+    <string name="questiontxtstring">Your questions will appear hear</string>
+    <string name="chooisesboxtitle">Please choose from the answers shown below</string>
+
+    <string name="chooise1">The first answer to choose will appear here</string>
+    <string name="chooise2">The second answer to choose will appear here</string>
+    <string name="chooise3">The third answer to choose will appear here</string>
+    <string name="chooise4">The forth answer to choose will appear here</string>
+
+    <string name="start">Start the quiz</string>
+    <string name="Exit">Exit the app</string>
+
+
+
+
 </resources>

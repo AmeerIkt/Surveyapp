@@ -14,7 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
-        android:text="TextView"
+        android:text="@string/questiontxtstring"
+        android:textColor="#180E0E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +25,9 @@
         android:id="@+id/chooiseset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:layout_marginTop="40dp"
+        android:text="@string/chooisesboxtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,37 +36,51 @@
 
         <RadioButton
             android:id="@+id/chooise1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/chooise1"
+            tools:ignore="VisualLintButtonSize">
 
         </RadioButton>
 
         <RadioButton
             android:id="@+id/chooise2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/chooise2"
+            tools:ignore="VisualLintButtonSize">
 
         </RadioButton>
 
         <RadioButton
             android:id="@+id/chooise3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/chooise3"
+            tools:ignore="VisualLintButtonSize">
 
         </RadioButton>
 
         <RadioButton
             android:id="@+id/chooise4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Male">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/chooise4"
+            tools:ignore="VisualLintButtonSize">
 
         </RadioButton>
 
 
     </RadioGroup>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="110dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooiseset" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
