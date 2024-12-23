@@ -49,6 +49,8 @@ public class Surveytemplate extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (question.getRightanswer() == getanswernumber(checkedId))
                     mark++;
+                RadioButton temp = findViewById(checkedId);
+                temp.setChecked(false);
 
                 if (questionID < quizQuestions.size()-1)
                     questionID++;
