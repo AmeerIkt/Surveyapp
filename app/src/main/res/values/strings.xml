@@ -10,8 +10,7 @@
 
     <string name="start">Start the quiz</string>
     <string name="Exit">Exit the app</string>
-
-
+    <string name="scoretext">Your score will appear here</string>
 
 
 </resources>

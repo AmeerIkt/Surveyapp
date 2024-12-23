@@ -49,12 +49,14 @@ public class Surveytemplate extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (question.getRightanswer() == getanswernumber(checkedId))
                     mark++;
+                chooisgroup.clearCheck();
 
                 if (questionID <= quizQuestions.size()-1)
                     questionID++;
-                else  startActivity(new Intent(Surveytemplate.this , score.class));
-
-
+                else {
+                    startActivity(new Intent(Surveytemplate.this , ResultPage.class));
+                    finish();
+                }
                 question = quizQuestions.get(questionID);
                 LoadQuestion();
 
@@ -69,9 +71,9 @@ public class Surveytemplate extends AppCompatActivity {
 
     private void StartTheShow(){
         quizQuestions  = new ArrayList<>();
-        quizQuestions.add(new Question("test" , "1" , "2" , "3" ,"4",2));
-        quizQuestions.add(new Question("test2" , "1" , "2" , "3" ,"4",2));
-        quizQuestions.add(new Question("test3" , "1" , "2" , "3" ,"4",2));
+        quizQuestions.add(new Question("How many states are in the US?" , "47" , "50" , "40" ,"53",2));
+        quizQuestions.add(new Question("What is the biggest city in israel?" , "Tel Aviv" , "Haifa" , "Jerusalem" ,"Ashdod",3));
+        quizQuestions.add(new Question("What is the most Expensive Currency in the world?" , "USD" , "EURO" , "ILS" ,"Kuwaiti Dinar",4));
 
         question =  quizQuestions.get(questionID);
 
