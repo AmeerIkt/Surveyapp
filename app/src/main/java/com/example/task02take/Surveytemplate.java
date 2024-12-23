@@ -20,7 +20,6 @@ public class Surveytemplate extends AppCompatActivity {
     TextView questionText;
     RadioGroup chooisgroup;
     RadioButton chooise1, chooise2, chooise3 , chooise4;
-    ProgressBar progressBar ;
 
     List<Question> quizQuestions;
     Question question;
@@ -39,7 +38,7 @@ public class Surveytemplate extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        loadquestions();
         StartTheShow();
 
 
@@ -52,14 +51,19 @@ public class Surveytemplate extends AppCompatActivity {
                 RadioButton temp = findViewById(checkedId);
                 temp.setChecked(false);
 
-                if (questionID < quizQuestions.size()-1)
+                if (questionID < quizQuestions.size() -1){
+
                     questionID++;
+                    question = quizQuestions.get(questionID);
+                    LoadQuestion();
+
+                }
                 else {
-                    startActivity(new Intent(Surveytemplate.this , ResultPage.class));
+                    Intent socrepage = new Intent(Surveytemplate.this , ResultPage.class) ;
+                    socrepage.putExtra("mark" , mark);
+                    startActivity(socrepage);
                     finish();
                 }
-                question = quizQuestions.get(questionID);
-                LoadQuestion();
 
             }
         });
@@ -72,11 +76,6 @@ public class Surveytemplate extends AppCompatActivity {
 
     private void StartTheShow(){
 
-        quizQuestions  = new ArrayList<>();
-        quizQuestions.add(new Question("How many states are in the US?" , "47" , "50" , "40" ,"53",2));
-        quizQuestions.add(new Question("What is the biggest city in israel?" , "Tel Aviv" , "Haifa" , "Jerusalem" ,"Ashdod",3));
-        quizQuestions.add(new Question("What is the most Expensive Currency in the world?" , "USD" , "EURO" , "ILS" ,"Kuwaiti Dinar",4));
-
         question =  quizQuestions.get(questionID);
 
         questionText =  findViewById(R.id.questiontxt);
@@ -84,7 +83,6 @@ public class Surveytemplate extends AppCompatActivity {
         chooise2 =  findViewById(R.id.chooise2);
         chooise3 =  findViewById(R.id.chooise3);
         chooise4 =  findViewById(R.id.chooise4);
-        progressBar =  findViewById(R.id.progressBar);
         LoadQuestion();
 
     }
@@ -95,8 +93,7 @@ public class Surveytemplate extends AppCompatActivity {
         chooise2.setText(question.getChooise2());
         chooise3.setText(question.getChooise3());
         chooise4.setText(question.getChooise4());
-        int progress = (questionID * 100) / quizQuestions.size();
-        progressBar.setProgress(progress);
+
 
     }
 
@@ -117,5 +114,19 @@ public class Surveytemplate extends AppCompatActivity {
     }
 
 
+    public void loadquestions (){
+        quizQuestions  = new ArrayList<>();
+        quizQuestions.add(new Question("What is the capital of France?" , "Paris" , "London" , "Berlin" ,"Madrid",1));
+        quizQuestions.add(new Question("What is the largest planet in our solar system?" , "Earth" , "Mars" , "Jupiter" ,"Saturn",3));
+        quizQuestions.add(new Question("Which element has the chemical symbol 'O'?" , "Oxygen" , "Gold" , "Osmium" ,"Carbon",1));
+        quizQuestions.add(new Question("How many continents are there on Earth?" , "5" , "6" , "7" ,"8",3));
+        quizQuestions.add(new Question("Which ocean is the largest by surface area?" , "Atlantic" , "Pacific" , "Indian" ,"Arctic",2));
+        quizQuestions.add(new Question("Who painted the Mona Lisa?" , "Leonardo da Vinci" , "Pablo Picasso" , "Vincent van Gogh" ,"Michelangelo",1));
+        quizQuestions.add(new Question("What is the square root of 64?" , "6" , "8" , "10" ,"12",2));
+        quizQuestions.add(new Question("Which country is known as the Land of the Rising Sun?" , "China" , "South Korea" , "Japan" ,"Thailand",3));
+        quizQuestions.add(new Question("What is the freezing point of water in Celsius?" , "0" , "32" , "-1" ,"100",1));
+        quizQuestions.add(new Question("What is the smallest prime number?" , "1" , "2" , "3" ,"5",2));
+
+    }
 }
 

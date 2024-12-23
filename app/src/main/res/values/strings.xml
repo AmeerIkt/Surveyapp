@@ -12,5 +12,7 @@
     <string name="Exit">Exit the app</string>
     <string name="scoretext">Your score will appear here</string>
 
+    <string name="returnn" >Click to return to main</string>
+
 
 </resources>
