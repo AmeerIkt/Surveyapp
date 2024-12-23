@@ -24,6 +24,8 @@ public class Surveytemplate extends AppCompatActivity {
     List<Question> quizQuestions;
     Question question;
 
+    ProgressBar progressBar ;
+
 
     int questionID = 0 , mark = 0;
 
@@ -52,8 +54,8 @@ public class Surveytemplate extends AppCompatActivity {
                 temp.setChecked(false);
 
                 if (questionID < quizQuestions.size() -1){
-
                     questionID++;
+                    progressBar.incrementProgressBy(100/quizQuestions.size());
                     question = quizQuestions.get(questionID);
                     LoadQuestion();
 
@@ -83,6 +85,7 @@ public class Surveytemplate extends AppCompatActivity {
         chooise2 =  findViewById(R.id.chooise2);
         chooise3 =  findViewById(R.id.chooise3);
         chooise4 =  findViewById(R.id.chooise4);
+        progressBar = findViewById(R.id.progressBar);
         LoadQuestion();
 
     }

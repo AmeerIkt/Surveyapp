@@ -73,5 +73,19 @@
 
     </RadioGroup>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="203dp"
+        android:layout_height="82dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="304dp"
+        android:indeterminateBehavior="repeat"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#6DB91A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
