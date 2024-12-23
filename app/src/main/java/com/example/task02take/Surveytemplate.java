@@ -20,7 +20,7 @@ public class Surveytemplate extends AppCompatActivity {
     TextView questionText;
     RadioGroup chooisgroup;
     RadioButton chooise1, chooise2, chooise3 , chooise4;
-    ProgressBar progressBar;
+    ProgressBar progressBar ;
 
     List<Question> quizQuestions;
     Question question;
@@ -71,6 +71,7 @@ public class Surveytemplate extends AppCompatActivity {
 
 
     private void StartTheShow(){
+
         quizQuestions  = new ArrayList<>();
         quizQuestions.add(new Question("How many states are in the US?" , "47" , "50" , "40" ,"53",2));
         quizQuestions.add(new Question("What is the biggest city in israel?" , "Tel Aviv" , "Haifa" , "Jerusalem" ,"Ashdod",3));
@@ -94,6 +95,8 @@ public class Surveytemplate extends AppCompatActivity {
         chooise2.setText(question.getChooise2());
         chooise3.setText(question.getChooise3());
         chooise4.setText(question.getChooise4());
+        int progress = (questionID * 100) / quizQuestions.size();
+        progressBar.setProgress(progress);
 
     }
 
