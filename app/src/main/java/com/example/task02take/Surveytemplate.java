@@ -1,13 +1,11 @@
 package com.example.task02take;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -54,6 +52,9 @@ public class Surveytemplate extends AppCompatActivity {
 
                 if (questionID <= quizQuestions.size()-1)
                     questionID++;
+                else  startActivity(new Intent(Surveytemplate.this , score.class));
+
+
                 question = quizQuestions.get(questionID);
                 LoadQuestion();
 
