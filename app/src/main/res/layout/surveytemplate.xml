@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A9F4"
+    android:background="#3F929D"
     tools:context=".Surveytemplate">
 
 
@@ -25,8 +25,8 @@
         android:id="@+id/chooiseset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_marginTop="40dp"
+        android:clickable="true"
         android:text="@string/chooisesboxtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.328"
@@ -75,12 +75,17 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="110dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chooiseset" />
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="203dp"
+        android:layout_height="82dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="304dp"
+        android:indeterminateBehavior="repeat"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#6DB91A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
