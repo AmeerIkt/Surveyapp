@@ -9,10 +9,18 @@
     <string name="chooise4">The forth answer to choose will appear here</string>
 
     <string name="start">Start the quiz</string>
-    <string name="Exit">Exit the app</string>
+    <string name="Exit">Exit the page</string>
     <string name="scoretext">Your score will appear here</string>
 
-    <string name="returnn" >Click to return to main</string>
+    <string name="returnn">Click to return to main</string>
+
+
+    <string name="usernametext">Username</string>
+    <string name="passwordtext">Password</string>
+    <string name="registertext">If you do not have an account click here to register</string>
+
+    <string name="loginbutton">Log-in</string>
+    <string name="registerbutton">Register</string>
 
 
 </resources>
