@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class ResultPage extends AppCompatActivity {
 
     Button finishbutton;
+    DatabaseHelper database;
 
 
     @Override
@@ -27,6 +28,8 @@ public class ResultPage extends AppCompatActivity {
             return insets;
         });
 
+
+
         finishbutton = findViewById(R.id.finishbutton);
         finishbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,5 +41,8 @@ public class ResultPage extends AppCompatActivity {
          int score = getIntent().getIntExtra("mark" , -1);
         TextView scoretextview = findViewById(R.id.ScoreTextView);
         scoretextview.setText("you scored : " +  score );
+        String username = getIntent().getStringExtra("username");
+        database = new DatabaseHelper(this);
+        database.updateScore(username , score);
     }
 }
